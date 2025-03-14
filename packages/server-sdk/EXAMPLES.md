@@ -44,8 +44,8 @@
 
 ### Configuring the Store
 
-The auth0-server-js SDK does not come with a built-in store for both transaction and state data, it's required to provide a persistent solution that fits your use-case.
-The goal of auth0-server-js is to provide a flexible API that allows you to use any storage mechanism you prefer, but is mostly designed to work with cookie and session-based storage.
+The `@auth0/server-sdk` SDK does not come with a built-in store for both transaction and state data, it's required to provide a persistent solution that fits your use-case.
+The goal of `@auth0/server-sdk` is to provide a flexible API that allows you to use any storage mechanism you prefer, but is mostly designed to work with cookie and session-based storage.
 
 The SDK methods accept an optional `storeOptions` object that can be used to pass additional options to the storage methods, such as Request / Response object, allowing to control cookies in the storage layer.
 
@@ -67,7 +67,7 @@ import {
   ServerClient,
   StateData,
   TransactionData
-} from '@auth0/auth0-server-js';
+} from '@auth0/server-sdk';
 
 export interface StoreOptions {
   request: FastifyRequest;
@@ -191,7 +191,7 @@ import {
   LogoutTokenClaims,
   ServerClient,
   StateData,
-} from '@auth0/auth0-server-js';
+} from '@auth0/server-sdk';
 
 export interface StoreOptions {
   request: FastifyRequest;
@@ -322,7 +322,7 @@ By default, the SDK uses `__a0_tx` and `__a0_session` to identify the Transactio
 To change this, the `transactionIdentifier` and `stateIdentifier` options can be set when instantiating `ServerClient`:
 
 ```ts
-import { ServerClient } from '@auth0/auth0-server-js';
+import { ServerClient } from '@auth0/server-sdk';
 
 const serverClient = new ServerClient({
   transactionIdentifier: '__my_tx',
@@ -336,7 +336,7 @@ const serverClient = new ServerClient({
 By default, the SDK will request an Access Token using `'openid profile email offline_access'` as the scope. This can be changed by configuring `authorizationParams.scope`:
 
 ```ts
-import { ServerClient } from '@auth0/auth0-server-js';
+import { ServerClient } from '@auth0/server-sdk';
 
 const serverClient = new ServerClient({
   authorizationParams: {
@@ -353,7 +353,7 @@ In order to ensure the SDK can refresh tokens when expired, the `offline_access`
 The SDK requires you to provide either a client secret, or private key JWT. Private Key JWT can be used by setting `clientAssertionSigningKey` when creating an instance of ServerClient:
 
 ```ts
-import { ServerClient } from '@auth0/auth0-server-js';
+import { ServerClient } from '@auth0/server-sdk';
 import { importPKCS8 } from 'jose';
 
 const clientPrivateKey = `-----BEGIN PRIVATE KEY-----
@@ -476,7 +476,7 @@ console.log(appState.myKey); // Logs 'myValue'
 > - `authorizeUrl` points to `/authorize` on your Auth0 domain, and is the URL the user is redirected to in order to authenticate.
 > - `url` points to a URL in the application, and is the URL Auth0 redirects the user back to after successful authentication.
 
-Using `appState` can be useful for a variaty of reasons, but is mostly supported to enable using a `returnTo` parameter in framework-specific SDKs that use `auth0-server-js`.
+Using `appState` can be useful for a variaty of reasons, but is mostly supported to enable using a `returnTo` parameter in framework-specific SDKs that use `@auth0/server-sdk`.
 
 ### Using Pushed Authorization Requests
 
@@ -551,7 +551,7 @@ console.log(appState.myKey); // Logs 'myValue'
 > - `authorizeUrl` points to `/authorize` on your Auth0 domain, and is the URL the user is redirected to in order to authenticate.
 > - `url` points to a URL in the application, and is the URL Auth0 redirects the user back to after successful authentication.
 
-Using `appState` can be useful for a variaty of reasons, but is mostly supported to enable using a `returnTo` parameter in framework-specific SDKs that use `auth0-server-js`.
+Using `appState` can be useful for a variaty of reasons, but is mostly supported to enable using a `returnTo` parameter in framework-specific SDKs that use `@auth0/server-sdk`.
 
 
 ### Passing `StoreOptions`
@@ -634,7 +634,7 @@ console.log(appState.myKey); // Logs 'myValue'
 > - `linkUserUrl` points to `/authorize` on your Auth0 domain, and is the URL the user is redirected to in order to link the account.
 > - `url` points to a URL in the application, and is the URL Auth0 redirects the user back to after successful linking the account.
 
-Using `appState` can be useful for a variaty of reasons, but is mostly supported to enable using a `returnTo` parameter in framework-specific SDKs that use `auth0-server-js`.
+Using `appState` can be useful for a variaty of reasons, but is mostly supported to enable using a `returnTo` parameter in framework-specific SDKs that use `@auth0/server-sdk`.
 
 ### Passing `StoreOptions`
 
@@ -673,7 +673,7 @@ console.log(appState.myKey); // Logs 'myValue'
 > - `linkUserUrl` points to `/authorize` on your Auth0 domain, and is the URL the user is redirected to in order to authenticate.
 > - `url` points to a URL in the application, and is the URL Auth0 redirects the user back to after successful linking the account.
 
-Using `appState` can be useful for a variaty of reasons, but is mostly supported to enable using a `returnTo` parameter in framework-specific SDKs that use `auth0-server-js`.
+Using `appState` can be useful for a variaty of reasons, but is mostly supported to enable using a `returnTo` parameter in framework-specific SDKs that use `@auth0/server-sdk`.
 
 
 ### Passing `StoreOptions`

@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "@auth0/api-sdk": "*",
-    "@auth0/auth0-server-js": "*",
+    "@auth0/server-sdk": "*",
     "@fastify/cookie": "^11.0.2",
     "fastify": "^5.2.1",
     "fastify-plugin": "^5.0.1"

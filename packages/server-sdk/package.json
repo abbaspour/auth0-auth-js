@@ -1,7 +1,7 @@
 {
-  "name": "@auth0/auth0-server-js",
+  "name": "@auth0/server-sdk",
   "version": "1.0.0",
-  "description": "Auth0 Authentication SDK for Server-Side Applications on JavaScript runtimes",
+  "description": "Auth0 SDK for Server-Side Applications on JavaScript runtimes",
   "type": "module",
   "scripts": {
     "build": "tsup",

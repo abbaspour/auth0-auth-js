@@ -8,10 +8,10 @@ Auth0-Auth-JS Mono Repo, containing SDKs for implementing user authentication in
 
 
 ## Packages
-- [`auth0-auth-js`](./packages/auth0-auth-js/README.md) - Authentication Client for JavaScript runtimes.
-- [`@auth0/api-sdk`](./packages/api-sdk/README.md) - Authentication SDK for API's on JavaScript runtimes.
-- [`auth0-server-js`](./packages/auth0-server-js/README.md) - Authentication SDK for Server-Side Applications on JavaScript runtimes.
-- [`auth0-fastify`](./packages/auth0-fastify/README.md) - Authentication SDK for Fastify Applications on JavaScript runtimes.
+- [`auth0-auth-js`](./packages/auth0-auth-js/README.md) - Auth Client for JavaScript runtimes.
+- [`@auth0/api-sdk`](./packages/api-sdk/README.md) - SDK for API's on JavaScript runtimes.
+- [`@auth0/server-sdk`](./packages/server-sdk/README.md) - SDK for Server-Side Applications on JavaScript runtimes.
+- [`auth0-fastify`](./packages/auth0-fastify/README.md) - SDK for Fastify Applications on JavaScript runtimes.
 
 ## Running Examples
 

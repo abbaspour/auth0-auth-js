@@ -1,5 +1,5 @@
 import type { CookieSerializeOptions } from '@fastify/cookie';
-import { EncryptedStoreOptions, LogoutTokenClaims, StateData } from '@auth0/auth0-server-js';
+import { EncryptedStoreOptions, LogoutTokenClaims, StateData } from '@auth0/server-sdk';
 import { MissingStoreOptionsError } from '../errors/index.js';
 import type { SessionConfiguration, SessionCookieOptions, SessionStore, StoreOptions } from '../types.js';
 import { AbstractSessionStore } from './abstract-session-store.js';

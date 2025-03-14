@@ -1,5 +1,5 @@
 import { CookieSerializeOptions } from '@fastify/cookie';
-import { TransactionData, TransactionStore } from '@auth0/auth0-server-js';
+import { TransactionData, TransactionStore } from '@auth0/server-sdk';
 import { MissingStoreOptionsError } from '../errors/index.js';
 import { StoreOptions } from '../types.js';
 

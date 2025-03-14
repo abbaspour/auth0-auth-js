@@ -1,4 +1,4 @@
-import { AbstractStateStore, EncryptedStoreOptions, LogoutTokenClaims, StateData } from '@auth0/auth0-server-js';
+import { AbstractStateStore, EncryptedStoreOptions, LogoutTokenClaims, StateData } from '@auth0/server-sdk';
 import type { SessionConfiguration, StoreOptions } from '../types.js';
 
 export abstract class AbstractSessionStore extends AbstractStateStore<StoreOptions> {

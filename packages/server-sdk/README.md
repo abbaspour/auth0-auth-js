@@ -2,8 +2,8 @@ The Auth0-Server-JS SDK is a library for implementing user authentication in Jav
 
 Using this SDK as-is in your application may not be trivial, as it is designed to be used as a building block for building framework-specific authentication SDKs.
 
-![Release](https://img.shields.io/npm/v/@auth0/auth0-server-js)
-![Downloads](https://img.shields.io/npm/dw/@auth0/auth0-server-js)
+![Release](https://img.shields.io/npm/v/@auth0/server-sdk)
+![Downloads](https://img.shields.io/npm/dw/@auth0/server-sdk)
 [![License](https://img.shields.io/:license-mit-blue.svg?style=flat)](https://opensource.org/licenses/MIT)
 
 📚 [Documentation](#documentation) - 🚀 [Getting Started](#getting-started) - 💬 [Feedback](#feedback)
@@ -18,7 +18,7 @@ Using this SDK as-is in your application may not be trivial, as it is designed t
 ### 1. Install the SDK
 
 ```shell
-npm i @auth0/auth0-server-js
+npm i @auth0/server-sdk
 ```
 
 This library requires Node.js 20 LTS and newer LTS versions.
@@ -28,7 +28,7 @@ This library requires Node.js 20 LTS and newer LTS versions.
 Create an instance of the `ServerClient`. This instance will be imported and used anywhere we need access to the authentication methods.
 
 ```ts
-import { ServerClient } from '@auth0/auth0-server-js';
+import { ServerClient } from '@auth0/server-sdk';
 
 const auth0 = new ServerClient<StoreOptions>({
   domain: '<AUTH0_DOMAIN>',
@@ -45,8 +45,8 @@ The `AUTH0_REDIRECT_URI` is needed to tell Auth0 what URL to redirect back to af
 
 ### 3. Configuring the Store
 
-The `auth0-server-js` SDK does not come with a built-in store for both transaction and state data, **it's required to provide a persistent solution** that fits your use-case.
-The goal of `auth0-server-js` is to provide a flexible API that allows you to use any storage mechanism you prefer, but is mostly designed to work with cookie and session-based storage.
+The `@auth0/server-sdk` SDK does not come with a built-in store for both transaction and state data, **it's required to provide a persistent solution** that fits your use-case.
+The goal of `@auth0/server-sdk` is to provide a flexible API that allows you to use any storage mechanism you prefer, but is mostly designed to work with cookie and session-based storage.
 
 The SDK methods accept an optional `storeOptions` object that can be used to pass additional options to the storage methods, such as Request / Response objects, allowing to control cookies in the storage layer.
 
@@ -68,7 +68,7 @@ import {
   ServerClient,
   StateData,
   TransactionData
-} from '@auth0/auth0-server-js';
+} from '@auth0/server-sdk';
 
 export interface StoreOptions {
   request: FastifyRequest;
@@ -192,7 +192,7 @@ import {
   LogoutTokenClaims,
   ServerClient,
   StateData,
-} from '@auth0/auth0-server-js';
+} from '@auth0/server-sdk';
 
 export interface StoreOptions {
   request: FastifyRequest;

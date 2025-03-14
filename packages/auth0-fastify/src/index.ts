@@ -1,6 +1,6 @@
 import type { FastifyInstance, FastifyRequest } from 'fastify';
 import fp from 'fastify-plugin';
-import { ServerClient } from '@auth0/auth0-server-js';
+import { ServerClient } from '@auth0/server-sdk';
 import type { SessionConfiguration, SessionStore, StoreOptions } from './types.js';
 import { CookieTransactionStore } from './store/cookie-transaction-store.js';
 import { StatelessStateStore } from './store/stateless-state-store.js';
