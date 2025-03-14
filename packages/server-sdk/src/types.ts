@@ -1,4 +1,4 @@
-import { AuthorizationDetails } from '@auth0/auth0-auth-js';
+import { AuthorizationDetails } from '../../auth-sdk/src/index.js';
 
 export interface ServerClientOptions<TStoreOptions = unknown> {
   domain: string;

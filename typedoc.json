@@ -4,7 +4,7 @@
     "entryPointStrategy": "packages",
     "includeVersion": false,
     "navigationLinks": {
-        "Auth0-Auth-JS": "/modules/_auth0_auth0-auth-js.html",
+        "Auth0-Auth-JS": "/modules/_auth0_auth-sdk.html",
         "Auth0-API-JS": "/modules/_auth0_api-sdk.html",
         "Auth0-Server-JS": "/modules/_auth0_server-sdk.html",
         "Auth0-Fastify": "/modules/_auth0_auth0-fastify.html"

@@ -1,5 +1,5 @@
 import type { AccessTokenForConnectionOptions, StateData } from '../types.js';
-import { TokenResponse } from '@auth0/auth0-auth-js';
+import { TokenResponse } from '../../../auth-sdk/src/index.js';
 
 /**
  * Utility function to update the state with a new response from the token endpoint

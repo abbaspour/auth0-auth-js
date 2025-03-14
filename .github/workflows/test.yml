@@ -40,8 +40,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build auth0-auth-js
-        run: npm run build -w @auth0/api-sdk
+      - name: Build @auth0/auth-sdk
+        run: npm run build -w @auth0/auth-sdk
 
       - name: Build @auth0/server-sdks
         run: npm run build -w @auth0/server-sdk
@@ -52,8 +52,8 @@ jobs:
       - name: Build auth0-fastify
         run: npm run build -w @auth0/auth0-fastify
 
-      - name: Test auth0-auth-js
-        run: npm run test:ci -w @auth0/auth0-auth-js
+      - name: Test @auth0/auth-sdk
+        run: npm run test:ci -w @auth0/auth-sdk
 
       - name: Test @auth0/server-sdk
         run: npm run test:ci -w @auth0/server-sdk
@@ -81,8 +81,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run @auth0/auth0-auth-js
-        run: npm run lint -w @auth0/auth0-auth-js
+      - name: Run @auth0/auth-sdk
+        run: npm run lint -w @auth0/auth-sdk
 
       - name: Run @auth0/server-sdk
         run: npm run lint -w @auth0/server-sdk

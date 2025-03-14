@@ -27,7 +27,7 @@
 By default, the SDK will request an Access Token using `'openid profile email offline_access'` as the scope. This can be changed by configuring `authorizationParams.scope`:
 
 ```ts
-import { AuthClient } from '@auth0/auth0-auth-js';
+import { AuthClient } from '@auth0/auth-sdk';
 
 const auth0 = new AuthClient({
   authorizationParams: {
@@ -44,7 +44,7 @@ In order to ensure the SDK can refresh tokens when expired, the `offline_access`
 The SDK requires you to provide either a client secret, or private key JWT. Private Key JWT can be used by setting `clientAssertionSigningKey` when creating an instance of ServerClient:
 
 ```ts
-import { AuthClient } from '@auth0/auth0-auth-js';
+import { AuthClient } from '@auth0/auth-sdk';
 import { importPKCS8 } from 'jose';
 
 const clientPrivateKey = `-----BEGIN PRIVATE KEY-----

@@ -24,7 +24,7 @@ import {
   AuthClient,
   AuthorizationDetails,
   TokenByRefreshTokenError,
-} from '@auth0/auth0-auth-js';
+} from '../../auth-sdk/src/index.js';
 
 export class ServerClient<TStoreOptions = unknown> {
   readonly #options: ServerClientOptions<TStoreOptions>;

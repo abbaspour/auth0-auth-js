@@ -4,15 +4,15 @@ This SDK isn't a fully fledged Authentication SDK that you can drop in and use, 
 Additionally, we use this SDK to build the Auth0-Server-JS SDK, which is a fully fledged SDK that enable you to add Authentication to your server applications.
 
 
-![Release](https://img.shields.io/npm/v/@auth0/auth0-auth-js)
-![Downloads](https://img.shields.io/npm/dw/@auth0/auth0-auth-js)
+![Release](https://img.shields.io/npm/v/@auth0/auth-sdk)
+![Downloads](https://img.shields.io/npm/dw/@auth0/auth-sdk)
 [![License](https://img.shields.io/:license-mit-blue.svg?style=flat)](https://opensource.org/licenses/MIT)
 
 📚 [Documentation](#documentation) - 🚀 [Getting Started](#getting-started) - 💻 [API Reference](https://auth0.github.io/auth0-auth-js/) - 💬 [Feedback](#feedback)
 
 ## Documentation
 
-- [Examples](https://github.com/auth0/auth0-server-js/blob/main/packages/auth0-auth-js/EXAMPLES.md) - examples for your different use cases.
+- [Examples](https://github.com/auth0/auth0-server-js/blob/main/packages/auth-sdk/EXAMPLES.md) - examples for your different use cases.
 - [Docs Site](https://auth0.com/docs) - explore our docs site and learn more about Auth0.
 
 ## Getting Started
@@ -20,7 +20,7 @@ Additionally, we use this SDK to build the Auth0-Server-JS SDK, which is a fully
 ### 1. Install the SDK
 
 ```shell
-npm i @auth0/auth0-auth-js
+npm i @auth0/auth-sdk
 ```
 
 This library requires Node.js 20 LTS and newer LTS versions.
@@ -31,7 +31,7 @@ Create an instance of the `AuthClient`. This instance will be imported and used 
 
 
 ```ts
-import { AuthClient } from '@auth0/auth0-auth-js';
+import { AuthClient } from '@auth0/auth-sdk';
 
 const authClient = new AuthClient({
   domain: '<AUTH0_DOMAIN>',
@@ -120,5 +120,5 @@ Please do not report security vulnerabilities on the public GitHub issue tracker
   Auth0 is an easy to implement, adaptable authentication and authorization platform. To learn more checkout <a href="https://auth0.com/why-auth0">Why Auth0?</a>
 </p>
 <p align="center">
-  This project is licensed under the MIT license. See the <a href="https://github.com/auth0/auth0-server-js/blob/main/packages/auth0-auth-js/LICENSE"> LICENSE</a> file for more info.
+  This project is licensed under the MIT license. See the <a href="https://github.com/auth0/auth0-server-js/blob/main/packages/auth-sdk/LICENSE"> LICENSE</a> file for more info.
 </p>

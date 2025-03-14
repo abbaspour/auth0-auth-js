@@ -1,7 +1,7 @@
 import { expect, test } from 'vitest';
 import type { StateData } from '../types.js';
 import { updateStateData, updateStateDataForConnectionTokenSet } from './utils.js';
-import { TokenResponse } from '../../../auth0-auth-js/dist/types.js';
+import { TokenResponse } from '../../../auth-sdk/src/types.js';
 
 test('updateStateData - should add when state undefined', () => {
   const response = {
