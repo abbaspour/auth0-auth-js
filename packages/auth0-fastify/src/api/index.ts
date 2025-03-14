@@ -1,7 +1,7 @@
 import type { FastifyInstance, FastifyReply, FastifyRequest } from 'fastify';
 import fp from 'fastify-plugin';
 
-import { ApiClient } from '@auth0/auth0-api-js';
+import { ApiClient } from '@auth0/api-sdk';
 
 export * from './../types.js';
 

@@ -1,16 +1,16 @@
-The Auth0-API-JS SDK is a library that allows securing API's.
+The Auth0 API-SDK is a library that allows securing API's running on a JavaScript runtime.
 
 Using this SDK as-is in your API may not be trivial, as it is designed to be used as a building block for building framework-specific SDKs.
 
-![Release](https://img.shields.io/npm/v/@auth0/auth0-api-js)
-![Downloads](https://img.shields.io/npm/dw/@auth0/auth0-api-js)
+![Release](https://img.shields.io/npm/v/@auth0/api-sdk)
+![Downloads](https://img.shields.io/npm/dw/@auth0/api-sdk)
 [![License](https://img.shields.io/:license-mit-blue.svg?style=flat)](https://opensource.org/licenses/MIT)
 
 📚 [Documentation](#documentation) - 🚀 [Getting Started](#getting-started) - 💬 [Feedback](#feedback)
 
 ## Documentation
 
-- [Examples](https://github.com/auth0/auth0-server-js/blob/main/packages/auth0-api-js/EXAMPLES.md) - examples for your different use cases.
+- [Examples](https://github.com/auth0/auth0-server-js/blob/main/packages/api-sdk/EXAMPLES.md) - examples for your different use cases.
 - [Docs Site](https://auth0.com/docs) - explore our docs site and learn more about Auth0.
 
 ## Getting Started
@@ -18,7 +18,7 @@ Using this SDK as-is in your API may not be trivial, as it is designed to be use
 ### 1. Install the SDK
 
 ```shell
-npm i @auth0/auth0-api-js
+npm i @auth0/api-sdk
 ```
 
 This library requires Node.js 20 LTS and newer LTS versions.
@@ -29,7 +29,7 @@ Create an instance of the `ApiClient`. This instance will be imported and used a
 
 
 ```ts
-import { ApiClient } from '@auth0/auth0-api-js';
+import { ApiClient } from '@auth0/api-sdk';
 
 const apiClient = new apiClient({
   domain: '<AUTH0_DOMAIN>',
