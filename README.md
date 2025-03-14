@@ -1,4 +1,4 @@
-Auth0-Auth-JS Mono Repo, containing SDKs for implementing user authentication in JavaScript applications.
+Auth0 Auth JavaScript Mono Repo, containing SDKs for implementing user authentication in JavaScript applications.
 
 ![Release](https://img.shields.io/npm/v/@auth0/auth-sdk)
 ![Downloads](https://img.shields.io/npm/dw/@auth0/auth-sdk)
