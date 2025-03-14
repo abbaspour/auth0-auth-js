@@ -1,7 +1,7 @@
-The Auth0 Fastify SDK is a library for implementing user authentication in Fastify applications.
+The Auth0 Fastify-Web SDK is a library for implementing user authentication in Fastify applications.
 
-![Release](https://img.shields.io/npm/v/@auth0/auth0-fastify)
-![Downloads](https://img.shields.io/npm/dw/@auth0/auth0-fastify)
+![Release](https://img.shields.io/npm/v/@auth0/fastify-web)
+![Downloads](https://img.shields.io/npm/dw/@auth0/fastify-web)
 [![License](https://img.shields.io/:license-mit-blue.svg?style=flat)](https://opensource.org/licenses/MIT)
 
 📚 [Documentation](#documentation) - 🚀 [Getting Started](#getting-started) - 💻 [API Reference](https://auth0.github.io/auth0-fastify/) - 💬 [Feedback](#feedback)
@@ -9,30 +9,22 @@ The Auth0 Fastify SDK is a library for implementing user authentication in Fasti
 ## Documentation
 
 - [QuickStart](https://auth0.com/docs/quickstart/webapp/fastify)- our guide for adding Auth0 to your Fastify app.
-- [Examples](https://github.com/auth0/auth0-server-js/blob/main/packages/auth0-fastify/EXAMPLES.md) - examples for your different use cases.
+- [Examples](https://github.com/auth0/auth0-server-js/blob/main/packages/fastify-web/EXAMPLES.md) - examples for your different use cases.
 - [Docs Site](https://auth0.com/docs) - explore our docs site and learn more about Auth0.
 
 ## Getting Started
 
-- [1. Install the SDK](#1-install-the-sdk)
-- [2. Register the Auth0 Fastify plugin for Web Applications](#2-register-the-auth0-fastify-plugin-for-web-applications)
-  - [Routes](#routes)
-  - [Protecting Routes](#protecting-routes)
-  - [Requesting an Access Token to call an API](#requesting-an-access-token-to-call-an-api)
-- [3. Register the Auth0 Fastify plugin for APIs](#3-register-the-auth0-fastify-plugin-for-apis)
-  - [Protecting API Routes](#protecting-api-routes)
-
 ### 1. Install the SDK
 
 ```shell
-npm i @auth0/auth0-fastify
+npm i @auth0/fastify-web
 ```
 
 This library requires Node.js 20 LTS and newer LTS versions.
 
-### 2. Register the Auth0 Fastify plugin for Web Applications
+### 2. Register the Auth0 Fastify plugin
 
-Register the Auth0 fastify plugin for Web Applications with the Fastify instance.
+Register the Auth0 fastify plugin with the Fastify instance.
 
 
 ```ts
@@ -65,7 +57,7 @@ The `APP_BASE_URL` is the URL that your application is running on. When developi
 
 #### Routes
 
-The SDK for Web Applications mounts 4 main routes:
+The SDK for Fastify Web Applications mounts 4 main routes:
 
 1. `/auth/login`: the login route that the user will be redirected to to initiate an authentication transaction
 2. `/auth/logout`: the logout route that must be added to your Auth0 application's Allowed Logout URLs
@@ -94,7 +86,7 @@ To learn more about account linking, check out the [Account Linking](./EXAMPLES.
 
 #### Protecting Routes
 
-In order to protect a Fastify route, you can use the SDK's `getSession()` method in a preHandler:
+In order to protect a Fastify route, you can use the SDK's `getSession()` method in a custom preHandler:
 
 ```ts
 async function hasSessionPreHandler(request: FastifyRequest, reply: FastifyReply) {
@@ -140,76 +132,6 @@ fastify.register(fastifyAuth0, {
 ```
 The `AUTH0_AUDIENCE` is the identifier of the API you want to call. You can find this in the API section of the Auth0 dashboard.
 
-### 3. Register the Auth0 Fastify plugin for APIs
-
-Register the Auth0 fastify plugin for API's with the Fastify instance.
-
-```ts
-import fastifyAuth0Api from '@auth0/fastify-api';
-
-const fastify = Fastify({
-  logger: true,
-});
-
-fastify.register(fastifyAuth0Api, {
-  domain: '<AUTH0_DOMAIN>',
-  audience: '<AUTH0_AUDIENCE>',
-});
-```
-The `AUTH0_DOMAIN` can be obtained from the [Auth0 Dashboard](https://manage.auth0.com) once you've created an API. 
-The `AUTH0_AUDIENCE` is the identifier of the API that is being called. You can find this in the API section of the Auth0 dashboard.
-
-#### Protecting API Routes
-
-In order to protect an API route, you can use the SDK's `requireAuth()` method in a preHandler:
-
-```ts
-fastify.register(() => {
-  fastify.get(
-    '/protected-api',
-    {
-      preHandler: fastify.requireAuth(),
-    },
-    async (request: FastifyRequest, reply) => {
-      return `Hello, ${request.user.sub}`;
-    }
-  );
-});
-```
-
-The SDK exposes the claims, extracted from the token, as the `user` property on the `FastifyRequest` object.
-In order to use a custom user type to represent custom claims, you can configure the `Token` type in a module augmentation:
-
-```ts
-declare module '@auth0/auth0-fastify/api' {
-  interface Token {
-    id: number;
-    name: string;
-    age: number;
-  }
-}
-```
-
-Doing so will change the user type on the `FastifyRequest` object automatically:
-
-```ts
-fastify.register(() => {
-  fastify.get(
-    '/protected-api',
-    {
-      preHandler: fastify.requireAuth(),
-    },
-    async (request: FastifyRequest, reply) => {
-      return `Hello, ${request.user.name}`;
-    }
-  );
-});
-```
-
-> [!IMPORTANT]  
-> The above is to protect API routes by the means of a bearer token, and not server-side rendering routes using a session. 
-
-
 ## Feedback
 
 ### Contributing
@@ -241,5 +163,5 @@ Please do not report security vulnerabilities on the public GitHub issue tracker
   Auth0 is an easy to implement, adaptable authentication and authorization platform. To learn more checkout <a href="https://auth0.com/why-auth0">Why Auth0?</a>
 </p>
 <p align="center">
-  This project is licensed under the MIT license. See the <a href="https://github.com/auth0/auth0-server-js/blob/main/packages/auth0-fastify/LICENSE"> LICENSE</a> file for more info.
+  This project is licensed under the MIT license. See the <a href="https://github.com/auth0/auth0-server-js/blob/main/packages/fastify-web/LICENSE"> LICENSE</a> file for more info.
 </p>

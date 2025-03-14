@@ -1,7 +1,7 @@
 {
-  "name": "@auth0/auth0-fastify",
+  "name": "@auth0/fastify-api",
   "version": "1.0.0",
-  "description": "Auth0 Authentication SDK for Fastify Applications on JavaScript runtimes",
+  "description": "Auth0 SDK for Fastify API's on JavaScript runtimes",
   "type": "module",
   "scripts": {
     "build": "tsup",
@@ -16,11 +16,6 @@
       "types": "./dist/index.d.ts",
       "require": "./dist/index.cjs",
       "import": "./dist/index.js"
-    },
-    "./api": {
-      "types": "./dist/api/index.d.ts",
-      "require": "./dist/api/index.cjs",
-      "import": "./dist/api/index.js"
     }
   },
   "devDependencies": {

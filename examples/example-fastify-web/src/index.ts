@@ -1,7 +1,7 @@
 import Fastify, { FastifyReply, FastifyRequest } from 'fastify';
 import fastifyStatic from '@fastify/static';
 import fastifyView from '@fastify/view';
-import fastifyAuth0 from '@auth0/auth0-fastify';
+import fastifyAuth0 from '@auth0/fastify-web';
 import ejs from 'ejs';
 import 'dotenv/config';
 import path from 'node:path';

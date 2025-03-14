@@ -1,6 +1,6 @@
-# Fastify Example
+# Fastify API Example
 
-This example demonstrates how to use the `auth0-fastify` package to protect API's in a Fastify application.
+This example demonstrates how to use the `@auth0/fastify-api` SDK to protect API's in a Fastify application.
 
 ## Install dependencies
 

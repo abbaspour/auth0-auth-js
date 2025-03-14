@@ -1,6 +1,6 @@
-# Fastify Example
+# Fastify Web Example
 
-This example demonstrates how to use the `auth0-fastify` package to authenticate users in a Fastify application.
+This example demonstrates how to use the `@auth0/fastify-web` SDK to authenticate users in a Fastify application.
 
 ## Install dependencies
 
